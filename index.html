@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liana</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color:purple;
+        color:white
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text zu Liana</h1>
+    <textarea cols="45" rows="5" placeholder="Hier Text" id="text"> </textarea>
+    <p
+      style="background-color: gray; color: white; padding: 1rem"
+      id="liana"
+    ></p>
+    <script>
+      document.getElementById('text').onkeyup = (e) => {
+        const liana = e.target.value
+          .split(' ')
+          .map((item) => item + 'liana')
+          .join(' ');
+        document.getElementById('liana').innerText = liana;
+      };
+    </script>
+  </body>
+</html>
